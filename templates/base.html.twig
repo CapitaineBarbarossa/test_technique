@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Test Technique
+			{% endblock %}
+		</title>
+
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1.0">
+
+		{# !!Feuilles de styles #}
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}"> {% block stylesheets %}{% endblock %}
+		<link
+		rel="stylesheet" href="public\assets\css\styles.css">
+
+		{# Fichiers JS #}
+		<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" defer></script>
+		{% block javascripts %}{% endblock %}
+		<script src="{{asset('assets/js/script.js')}}" defer></script>
+	</head>
+	<body>
+		{% include "_partials/_nav.html.twig" %}
+
+		{% block body %}{% endblock %}
+
+	</body>
+</html>
+<style>
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: Montserrat, Helvetica, sans-serif;
+		background: linear-gradient(0deg, rgba(73, 138, 196, 0.8) 0%, rgba(49, 129, 200, 0.8) 50%, rgba(0, 0, 0, 0.8995973389355743) 100%), url('/assets/uploads/background2.jpg');
+
+	}
+
+	main {
+		height: 1000px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+</style>

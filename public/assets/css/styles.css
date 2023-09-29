@@ -1,0 +1,26 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+content {
+    background-color: blue;
+    flex-grow: 1;
+}
+main {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(73, 138, 196);
+    background: linear-gradient(0deg, rgba(73, 138, 196, 0.8) 0%, rgba(49, 129, 200, 0.8) 50%, rgba(0, 0, 0, 0.8995973389355743) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
